@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.grainy-bg {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/wcAAwAB/4Z3l8MAAAAASUVORK5CYII=');
+  background-size: cover;
+  opacity: 0.05; /* Adjust this value to make the texture lighter */
+  pointer-events: none; /* Ensure the grainy texture does not interfere with interactions */
+}
+
+
+

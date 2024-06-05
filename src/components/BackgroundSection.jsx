@@ -1,9 +1,10 @@
 import React from 'react';
 
+
 const BackgroundSection = () => {
   return (
-    <section className="bg-gray-900 relative text-white py-16">
-      <div className="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12">
+    <section className="bg-gray-900 relative text-white py-16 position-relative">
+      <div className="   container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12 relative z-10">
         <div className="md:w-1/2">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
             Every order <br />
@@ -24,9 +25,7 @@ const BackgroundSection = () => {
             Integrate your logistics stack with Crest in just two days
           </p>
         </div>
-        <div className="md:w-1/2 mt-12 md:mt-0 ">
-          
-        </div>
+      
       </div>
     </section>
   );
