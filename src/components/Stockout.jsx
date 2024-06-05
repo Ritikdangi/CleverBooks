@@ -46,11 +46,11 @@ const StockOuts = () => {
   const renderIcon = () => {
     switch (selected) {
       case 'stockouts':
-        return <span role="img" aria-label="stockouts" className="text-white text-lg">🛒</span>;
+        return <span role="img" aria-label="stockouts" className="text-white text-2xl">🛒</span>;
       case 'cashRecovery':
-        return <span role="img" aria-label="cashRecovery" className="text-white text-lg">💰</span>;
+        return <span role="img" aria-label="cashRecovery" className="text-white text-2xl">💰</span>;
       case 'revenue':
-        return <span role="img" aria-label="revenue" className="text-white text-lg">📈</span>;
+        return <span role="img" aria-label="revenue" className="text-white text-2xl">📈</span>;
       default:
         return null;
     }
@@ -58,29 +58,52 @@ const StockOuts = () => {
 
   return (
     <div className="bg-black min-h-screen flex flex-col">
-      <div className="flex items-start p-6">
-        <div className="flex flex-col items-center">
-          <div className="bg-gradient-to-r from-pink-500 to-purple-500 p-2 rounded-full mb-6 transition-all duration-500 ease-in-out">
-            {renderIcon()}
-          </div>
+      <div className="flex items-start p-6 relative">
+        {/* Vertical Pink Path */}
+        <div className="absolute left-10 top-0 bottom-0 w-1 bg-gradient-to-b from-pink-500 to-purple-500"></div>
+
+        <div className="relative flex flex-col items-start ml-14">
+          {/* Buttons */}
           <button
-            className={`text-white mb-2 ${selected === 'stockouts' ? 'border-l-4 pl-2 border-pink-500' : 'border-l-4 pl-2 border-transparent'}`}
+            className={`text-white mb-4 px-6 py-2 rounded-full border-2 transition duration-300 ease-in-out transform hover:scale-105 ${
+              selected === 'stockouts'
+                ? 'border-gradient-to-r from-pink-500 to-purple-500'
+                : 'border-gray-700 hover:border-gradient-to-r from-pink-500 to-purple-500'
+            }`}
             onClick={() => setSelected('stockouts')}
           >
             STOCKOUTS
           </button>
           <button
-            className={`text-white mb-2 ${selected === 'cashRecovery' ? 'border-l-4 pl-2 border-pink-500' : 'border-l-4 pl-2 border-transparent'}`}
+            className={`text-white mb-4 px-6 py-2 rounded-full border-2 transition duration-300 ease-in-out transform hover:scale-105 ${
+              selected === 'cashRecovery'
+                ? 'border-gradient-to-r from-pink-500 to-purple-500'
+                : 'border-gray-700 hover:border-gradient-to-r from-pink-500 to-purple-500'
+            }`}
             onClick={() => setSelected('cashRecovery')}
           >
             CASH RECOVERY CYCLE
           </button>
           <button
-            className={`text-white mb-2 ${selected === 'revenue' ? 'border-l-4 pl-2 border-pink-500' : 'border-l-4 pl-2 border-transparent'}`}
+            className={`text-white mb-4 px-6 py-2 rounded-full border-2 transition duration-300 ease-in-out transform hover:scale-105 ${
+              selected === 'revenue'
+                ? 'border-gradient-to-r from-pink-500 to-purple-500'
+                : 'border-gray-700 hover:border-gradient-to-r from-pink-500 to-purple-500'
+            }`}
             onClick={() => setSelected('revenue')}
           >
             REVENUE
           </button>
+
+          {/* Moving Icon */}
+          <div
+            className={`absolute transition-all duration-500 ease-in-out transform ${
+              selected === 'stockouts' ? 'top-4' : selected === 'cashRecovery' ? 'top-20' : 'top-36'
+            }`}
+            style={{ left: '30px' }}
+          >
+            {renderIcon()}
+          </div>
         </div>
       </div>
       <div className="flex-1 flex items-center justify-center">
