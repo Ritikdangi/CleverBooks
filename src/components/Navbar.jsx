@@ -1,6 +1,5 @@
 // src/Navbar.js
 import React, { useState } from 'react';
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,7 +10,7 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between items-center p-4 bg-gray-900">
       <div className="flex items-center">
-        <img src="/logo.png" alt="Crest Logo" className="h-10" />
+        <img src={require('../assests/0.png')} alt="Crest Logo" className="h-10" />
       </div>
       <ul className="hidden md:flex space-x-8 text-white">
         {['Product', 'Pricing', 'Industry', 'Customer Stories', 'About', 'Blog'].map((item) => (
