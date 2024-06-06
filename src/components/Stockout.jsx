@@ -69,9 +69,9 @@ const StockOuts = () => {
     <div className="bg-black min-h-screen flex flex-col"> 
       <div className="flex items-start p-6 relative"> 
         {/* Vertical Pink Path */} 
-        <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-pink-500 to-purple-500"></div> 
+        <div className="absolute left-8 top-7 bottom-9 w-1 bg-gradient-to-b from-pink-500 to-purple-500"></div> 
  
-        <div className="relative flex flex-col items-start ml-14"> 
+        <div className="relative flex flex-col items-start ml-14 mt-2"> 
           {/* Buttons */} 
           <button 
             className={`text-white mb-4 px-6 py-2 rounded-full border-2 transition duration-300 ease-in-out transform hover:scale-105 ${ 
@@ -84,7 +84,7 @@ const StockOuts = () => {
             STOCKOUTS 
           </button> 
           <button 
-            className={`text-white mb-4 px-6 py-2 rounded-full border-2 transition duration-300 ease-in-out transform hover:scale-105 ${ 
+            className={`text-white mt-1 mb-4 px-6 py-2 rounded-full border-2 transition duration-300 ease-in-out transform hover:scale-105 ${ 
               selected === 'cashRecovery' 
                 ? 'border-pink-500' 
                 : 'border-gray-700 hover:border-gradient-to-r from-pink-500 to-purple-500' 
@@ -94,7 +94,7 @@ const StockOuts = () => {
             CASH RECOVERY CYCLE 
           </button> 
           <button 
-            className={`text-white mb-4 px-6 py-2 rounded-full border-2 transition duration-300 ease-in-out transform hover:scale-105 ${ 
+            className={`text-white mt-3 mb-3 px-6 py-2 rounded-full border-2 transition duration-300 ease-in-out transform hover:scale-105 ${ 
               selected === 'revenue' 
                 ? 'border-pink-500' 
                 : 'border-gray-700 hover:border-gradient-to-r from-pink-500 to-purple-500' 
